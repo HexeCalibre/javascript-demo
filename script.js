@@ -92,3 +92,54 @@ console.log(`replaceAll(" ", "-") = ${phoneNumber.replaceAll(" ", "-")}`);
 
 console.log(`toLowerCase = ${car.toLowerCase()}`);
 console.log(`toUpperCase = ${car.toUpperCase()}`);
+
+console.log("\n ----------Arrays--------");
+
+let avenger = "Captain America";
+const avengers = ["Ironman", "Spiderman", "Thor", "Hulk"];
+console.log(avengers);
+
+let avengers2 = [];
+
+console.log(`Array.isArray(avengers) ${Array.isArray(avengers)}`);
+console.log(`Array.isArray(avenger) ${Array.isArray(avenger)}`);
+
+console.log(`avengers[0] = ${avengers[0]}`);
+console.log(`avengers[1] = ${avengers[1]}`);
+console.log(`avengers[4] = ${avengers[4]}`);
+
+console.log(`avengers.indexOf("Thor") = ${avengers.indexOf("Thor")}`);
+console.log(
+  `avengers.indexOf("Captain America") = ${avengers.indexOf("Captain America")}`
+);
+
+avengers.push("Captain America");
+console.log(avengers);
+
+avengers2.push("Thor");
+avengers2.push("Ironman");
+console.log(avengers2);
+
+avengers.pop();
+console.log(avengers);
+
+avengers.splice(0, 1);
+console.log(avengers);
+
+let rawFullName = "Maria Ibarra Clara";
+const myArray = rawFullName.split(" ");
+console.log(myArray[0]);
+console.log(myArray[1]);
+console.log(myArray[2]);
+
+let joinFullName = myArray.join(" ");
+console.log(joinFullName);
+
+let reverseArray = avengers.reverse();
+console.log(reverseArray);
+
+avengers.shift();
+console.log(avengers);
+
+avengers.unshift("Captain America");
+console.log(avengers);
