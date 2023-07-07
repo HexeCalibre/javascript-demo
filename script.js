@@ -143,3 +143,145 @@ console.log(avengers);
 
 avengers.unshift("Captain America");
 console.log(avengers);
+
+console.log("\n -----Operators");
+
+let sum = 1 / 1;
+console.log(`sum = 1 / 1 = ${sum}`);
+
+let modulusValue = 21 % 2;
+console.log(`modulus = ${modulusValue}`);
+
+let exponent = 6 ** 2;
+console.log(`exponent = ${exponent}`);
+
+sum += 1; // sum = sum + 1
+console.log(`sum += 1 = ${sum}`);
+
+sum -= 1; // sum = sum - 1
+console.log(`sum -= 1 = ${sum}`);
+
+sum++; // sum = sum + 1
+console.log(`sum++ = ${sum}`);
+
+sum--; // sum = sum - 1
+console.log(`sum-- = ${sum}`);
+
+console.log(`++sum = ${++sum}`);
+
+console.log(`sum++ = ${sum++}`);
+
+console.log(`sum = ${sum}`);
+
+const array = ["value1", "value2"];
+let index = 0;
+
+array[index++]; //array[0]
+array[index]; //array[1]
+
+console.log("\n -----If Statement");
+
+let grade = "100";
+
+if (grade == 100) {
+  console.log("You have a perfect grade");
+} else if (grade >= 90) {
+  console.log("You got a high grade");
+} else if (grade < 90 && grade > 80) {
+  console.log("You got a average grade");
+} else if (grade >= 80 || grade > 70) {
+  console.log("You got a low grade");
+} else console.log("Keep studying...");
+
+if (grade === 100) {
+  console.log("You have a perfect grade");
+} else console.log("Keep studying...");
+
+console.log("\n -----Object Literals");
+
+const myCar = {
+  brand: "Toyota",
+  model: "Innova",
+  year: 2024,
+  colors: ["red", "black", "blue"],
+  specifications: {
+    displacement: "1.5 liters",
+    cylinder: 3,
+    transmission: "manual",
+    horsepower: 100,
+    torque: "200 nm",
+  },
+};
+
+console.log(myCar.brand);
+console.log(myCar.specifications.transmission);
+console.log(myCar.colors[0]);
+
+console.log("\n -----Object Literals Array");
+
+const myCars = [
+  {
+    brand: "Toyota",
+    model: "Innova",
+    year: 2024,
+    colors: ["red", "black", "blue"],
+    specifications: {
+      displacement: "1.5 liters",
+      cylinder: 3,
+      transmission: "manual",
+      horsepower: 100,
+      torque: "200 nm",
+    },
+  },
+  {
+    brand: "Toyota",
+    model: "Veluz",
+    year: 2024,
+    colors: ["white", "black", "blue"],
+    specifications: {
+      displacement: "1.5 liters",
+      cylinder: 3,
+      transmission: "automatic",
+      horsepower: 120,
+      torque: "250 nm",
+    },
+  },
+];
+
+console.log(myCars[0].model);
+console.log(myCars[1].model);
+
+console.log("\n -----Loops");
+
+console.log("\n -----For Loops");
+for (let i = 0; i < 10; i++) {
+  console.log(`i = ${i}`);
+}
+
+for (let i = 0; i < myCars.length; i++) {
+  console.log(`myCars[i].model = ${myCars[i].model}`);
+}
+
+for (let i = myCars.length - 1; i >= 0; i--) {
+  console.log(`myCars[i].model = ${myCars[i].model}`);
+}
+
+console.log("\n -----While Loops");
+
+let stop = false;
+let i = 0;
+while (!stop) {
+  console.log("Keep Looping While");
+
+  if (myCars.length <= i) {
+    stop = true;
+  }
+
+  i++;
+}
+
+i = 0;
+do {
+  console.log("Keep Looping Do While ");
+  i++;
+} while (i < 5);
