@@ -285,3 +285,8 @@ do {
   console.log("Keep Looping Do While ");
   i++;
 } while (i < 5);
+
+console.log("\n Looping in arrays");
+for (let car of myCars) {
+  console.log(car.model);
+}
