@@ -160,3 +160,53 @@ let parts = ["shoulder", "knees"];
 let song = ["head", ...parts, "and", "toes"];
 
 console.log(song);
+
+let personObject = {
+  name: "Juan Dela Cruz",
+  age: 20,
+};
+
+let customerObject = {
+  address: "123 Main Street",
+};
+
+let combineObject = { ...personObject, ...customerObject };
+
+console.log("\ncombine object");
+console.log(combineObject);
+
+console.log("\n---------DESTRUCTURING");
+const vehicle = ["mustang", "ferrari", "lamborghini"];
+
+// let v1 = vehicle[0];
+// let v2 = vehicle[1];
+// let v3 = vehicle[3];
+
+// const [v1, v2, v3] = vehicle;
+const [v1, v2] = vehicle;
+
+console.log(`${v1} ${v2}`);
+// console.log(`${v1} ${v2} ${v3}`);
+
+const vehicleOne = {
+  brand: "Ford",
+  model: "Mustang",
+  year: 2024,
+};
+
+const { brand, model, year } = vehicleOne;
+
+console.log(brand);
+console.log(model);
+console.log(year);
+
+console.log("\n---------Arrow function");
+
+//Traditional function
+function getTotal(x, y) {
+  return x + y;
+}
+
+const getTotalArrowFunction = (x, y) => x + y;
+
+console.log(getTotalArrowFunction(1, 2));
