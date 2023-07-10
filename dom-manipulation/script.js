@@ -59,5 +59,12 @@ function clickButton(event) {
   }
 }
 
+// function clickButton3() {
+//   alert("Button 3 Click");
+// }
+
 const btn2 = document.querySelector("#button-2");
 btn2.addEventListener("click", clickButton);
+
+const btn3 = document.querySelector("#button-3");
+btn3.addEventListener("click", () => alert("Button 3 Click"));
