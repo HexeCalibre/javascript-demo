@@ -290,3 +290,16 @@ console.log("\n Looping in arrays");
 for (let car of myCars) {
   console.log(car.model);
 }
+
+console.log("\n-------------------Typecasting");
+
+let price = "$6.99";
+let priceValue = price.replace("$", "");
+
+let total = parseFloat(priceValue) * 2;
+
+console.log(total);
+
+let number = Number(priceValue);
+let intPrice = parseInt(priceValue);
+console.log(intPrice);
