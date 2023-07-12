@@ -58,7 +58,7 @@ class House {
     this.price = price;
   }
 
-  enterVisitor = function (person) {
+  enterVisitor(person) {
     let fullName = person.getFullName();
 
     if (fullName.toLowerCase() == "iron man") {
@@ -66,7 +66,7 @@ class House {
     } else {
       this.visitors.push(person);
     }
-  };
+  }
 }
 
 let house1 = new House("123 Main Street Manila", 2000000);
@@ -92,6 +92,7 @@ console.log("\n------------------Encapsulation");
 class SafeHouse {
   #vips = [];
   #visitors = [];
+
   #address = "";
   #price = 0;
 
@@ -100,7 +101,7 @@ class SafeHouse {
     this.#price = price;
   }
 
-  enterVisitor = function (person) {
+  enterVisitor(person) {
     let fullName = person.getFullName();
 
     if (fullName.toLowerCase() == "iron man") {
@@ -108,17 +109,25 @@ class SafeHouse {
     } else {
       this.#visitors.push(person);
     }
-  };
+  }
 
   get address() {
     return this.#address;
   }
 
   set address(currentAddress) {
-    if (currentAddress != "") {
-      this.#address = currentAddress;
-    }
+    this.#address = currentAddress;
   }
+
+  // get visitors() {
+  //   let r = [];
+
+  //   for (let v of this.#visitors) {
+  //     r.push(v);
+  //   }
+
+  //   return r;
+  // }
 }
 
 let safeHouse1 = new SafeHouse("123 Main Street Manila", 2000000);
@@ -132,8 +141,7 @@ console.log("VISITORS");
 console.log(safeHouse1.visitors);
 console.log("address");
 
-safeHouse1.address = "";
-
+safeHouse1.address = "New York City";
 console.log(safeHouse1.address);
 
 console.log("\n-------------Inheritance");
@@ -144,9 +152,9 @@ class Engineer extends Person {
     this.company = company;
   }
 
-  getFullName = function () {
+  getFullName() {
     return `Engr. ${firstName} ${lastName}`;
-  };
+  }
 }
 
 console.log("\n-------------Protected");
@@ -182,9 +190,9 @@ class Doctor extends Person {
     this.company = company;
   }
 
-  getFullName = function () {
+  getFullName() {
     return `Dr. ${this.firstName} ${this.lastName}`;
-  };
+  }
 }
 
 function printFullName(p) {
