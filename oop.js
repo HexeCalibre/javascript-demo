@@ -119,15 +119,15 @@ class SafeHouse {
     this.#address = currentAddress;
   }
 
-  // get visitors() {
-  //   let r = [];
+  get visitors() {
+    let r = [];
 
-  //   for (let v of this.#visitors) {
-  //     r.push(v);
-  //   }
+    for (let v of this.#visitors) {
+      r.push(v);
+    }
 
-  //   return r;
-  // }
+    return r;
+  }
 }
 
 let safeHouse1 = new SafeHouse("123 Main Street Manila", 2000000);
